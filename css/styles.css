@@ -331,8 +331,7 @@ img {
   padding-left: 38px;
 }
 .modal-input:hover,
-.modal-input:focus,
-.modal-input:active {
+.modal-input:focus {
   outline: 1px solid var(--iris);
   border: none;
 }
@@ -347,8 +346,7 @@ img {
   fill: var(--navyblue);
 }
 .input:hover .modal-icon,
-.input:focus .modal-icon,
-.input:active .modal-icon {
+.input:focus .modal-icon {
   fill: var(--iris);
 }
 
@@ -369,8 +367,7 @@ img {
   margin-bottom: 16px;
 }
 .modal-comment:hover,
-.modal-comment:focus,
-.modal-comment:active {
+.modal-comment:focus {
   outline: 1px solid var(--iris);
   border: none;
 }

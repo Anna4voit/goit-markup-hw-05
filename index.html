@@ -545,6 +545,7 @@
         </form>
       </div>
     </footer>
+
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -607,14 +608,21 @@
 
           <div class="check-box">
             <input
+              class="real-box"
               type="checkbox"
               name="accept"
               id="check-field"
               value="I accept the terms and conditions
               of the Privacy Policy"
             />
-            <label class="modal-label" for="check-field"
-              >I accept the terms and conditions of the Privacy Policy</label
+            <div class="deco-box">
+              <svg class="check" width="16" height="16">
+                <use href="./images/icons.svg#icon-click"></use>
+              </svg>
+            </div>
+            <label class="label-link" for="check-field"
+              >I accept the terms and conditions of the
+              <a class="modal-link" href="">Privacy Policy</a></label
             >
           </div>
           <button class="btn-send" type="submit">Send</button>

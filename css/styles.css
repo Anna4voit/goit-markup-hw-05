@@ -333,18 +333,25 @@ img {
 .modal-input:hover,
 .modal-input:focus,
 .modal-input:active {
-  outline: none;
-  border: 1px solid var(--iris);
+  outline: 1px solid var(--iris);
+  border: none;
 }
-
+.input {
+  position: relative;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  fill: var(--navyblue);
+}
 .input:hover .modal-icon,
 .input:focus .modal-icon,
 .input:active .modal-icon {
   fill: var(--iris);
 }
-/* .modal-input:placeholder {
-  border: 1px solid var(--iris);
-} */
+
 .modal-comment {
   font-family: "Roboto";
   font-style: normal;
@@ -364,22 +371,57 @@ img {
 .modal-comment:hover,
 .modal-comment:focus,
 .modal-comment:active {
-  outline: none;
-  border: 1px solid var(--iris);
+  outline: 1px solid var(--iris);
+  border: none;
 }
-.input {
-  position: relative;
-}
-.modal-icon {
-  position: absolute;
-  top: 11px;
-  left: 16px;
-  fill: var(--navyblue);
-}
+
 .check-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.real-box {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  z-index: -1;
+}
+.deco-box {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navyblue-modal);
+  border-radius: 2px;
+  background: var(--cloud);
+  fill: var(--cloud);
+}
+
+.real-box:checked + .deco-box {
+  border: none;
+  fill: var(--ocean);
+}
+
+.label-link {
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--lightslate);
+  display: inline-flex;
+  margin-left: 25px;
+}
+.modal-link {
+  color: var(--iris);
+  padding-left: 4px;
 }
 .btn-send {
   color: var(--white);
@@ -399,6 +441,8 @@ img {
   height: 56px;
   align-self: center;
   margin-top: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-send:hover,
 .btn-send:focus {
@@ -818,7 +862,6 @@ textarea {
   flex-direction: column;
   gap: 16px;
   margin-left: auto;
-  /* margin-left: 80px; */
 }
 
 .subscr-label {
@@ -850,6 +893,11 @@ textarea {
   width: 264px;
   height: 40px;
   color: var(--white);
+}
+.subscr-input:hover,
+.subscr-input:focus {
+  outline: 1px solid var(--white);
+  border: none;
 }
 .subscr-btn {
   cursor: pointer;

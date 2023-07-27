@@ -309,6 +309,9 @@ img {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+.label-item {
+  margin-bottom: 8px;
+}
 .modal-label {
   font-family: "Roboto";
   font-style: normal;
@@ -318,8 +321,8 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
 
-  display: flex;
-  flex-direction: column;
+  display: block;
+  /* flex-direction: column; */
   margin-bottom: 4px;
 }
 .modal-input {
@@ -854,14 +857,16 @@ textarea {
 }
 
 /* Subcribe form */
-.subscr-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.footer-form {
   margin-left: auto;
 }
+.subscr-form {
+  display: flex;
+  /* gap: 24px; */
+  /* margin-left: auto; */
+}
 
-.subscr-label {
+.subscr-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -869,12 +874,11 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white);
+  margin-bottom: 16px;
 }
 .box {
   display: flex;
-  gap: 24px;
-  /* justify-content: center;
-  align-items: center; */
+  margin-left: 24px;
 }
 .subscr-input {
   padding-left: 16px;
@@ -890,6 +894,7 @@ textarea {
   width: 264px;
   height: 40px;
   color: var(--white);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .subscr-input:hover,
 .subscr-input:focus {
@@ -900,7 +905,7 @@ textarea {
   cursor: pointer;
   display: flex;
   gap: 16px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   border-radius: 4px;
   background: var(--iris);

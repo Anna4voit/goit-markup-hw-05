@@ -531,7 +531,7 @@
             <label class="subscr-label">
               <input
                 class="subscr-input"
-                type="text"
+                type="email"
                 name="subscribe"
                 placeholder="E-mail"
             /></label>
@@ -625,13 +625,15 @@
               id="user-privacy"
               value="true"
             />
-            <label class="label-link" for="user-privacy"
-              >I accept the terms and conditions of the
+            <label class="label-link" for="user-privacy">
+              <span class="deco-box">
+                <svg class="check" width="10" height="8">
+                  <use href="./images/icons.svg#icon-Vector"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
               <a class="modal-link" href="">Privacy Policy</a>
-              <span class="deco-box"
-                ><svg class="check" width="16" height="16">
-                  <use href="./images/icons.svg#icon-click"></use></svg></span
-            ></label>
+            </label>
           </div>
           <button class="btn-send" type="submit">Send</button>
         </form>

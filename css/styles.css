@@ -397,22 +397,24 @@ img {
   z-index: -1;
 } */
 .deco-box {
-  position: absolute;
-  display: flex;
+  /* position: absolute; */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   width: 16px;
   height: 16px;
   border: 1px solid var(--navyblue-modal);
   border-radius: 2px;
-  background: var(--cloud);
-  fill: var(--cloud);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
-.real-box:checked + .deco-box {
+.real-box:checked .deco-box {
   border: none;
-  fill: var(--ocean);
+  fill: var(--cloud);
+  background-color: var(--ocean);
 }
 
 .label-link {
@@ -437,7 +439,7 @@ img {
   color: var(--white);
   font-family: "Roboto";
   text-align: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -451,7 +453,6 @@ img {
   min-width: 169px;
   height: 56px;
   align-self: center;
-  margin-top: 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -537,7 +538,6 @@ textarea {
 }
 
 /* Our team */
-
 .our-team {
   background-color: #f4f4fd;
   padding: 120px 0;
@@ -658,13 +658,12 @@ textarea {
   width: calc((100% - 120px) / 6);
   height: 88px;
 }
+
 /* Footer */
 .footer-container {
   padding: 100px 0 0 0;
   height: 312px;
   background: var(--navyblue);
-  /* max-width: 1440px; */
-  /* margin: 0 auto; */
 }
 .footsocial {
   display: flex;
@@ -742,7 +741,6 @@ textarea {
 }
 
 /* Portfolio */
-
 /* List of button  */
 .section-portfolio {
   padding: 96px 0 120px 0;
@@ -781,6 +779,7 @@ textarea {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
+
 /* List of projects */
 .project-container {
   display: flex;
@@ -874,7 +873,6 @@ textarea {
 .subscr-form {
   display: flex;
   gap: 24px;
-  /* margin-left: auto; */
 }
 
 .subscr-text {
@@ -894,7 +892,7 @@ textarea {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 0.2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
   border: 1px solid var(--white);
@@ -902,6 +900,7 @@ textarea {
   width: 264px;
   height: 40px;
   color: var(--white);
+  background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .subscr-input:hover,
@@ -912,7 +911,7 @@ textarea {
 .subscr-btn {
   cursor: pointer;
   display: flex;
-  gap: 16px;
+  /* gap: 16px; */
   min-width: 165px;
   height: 40px;
   border-radius: 4px;
@@ -921,12 +920,12 @@ textarea {
   justify-content: center;
   align-items: center;
   color: var(--white);
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -937,6 +936,7 @@ textarea {
   background-color: var(--ocean);
 }
 .subscr-frame {
+  margin-left: 16px;
   fill: var(--white);
 }
 input::placeholder {
